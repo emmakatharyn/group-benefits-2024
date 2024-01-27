@@ -1,3 +1,5 @@
+gh-pages homepage URL: 'https://ereed-erisa.github.io/group-benefits-2024/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
