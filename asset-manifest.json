@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/group-benefits-2024/static/css/main.2b70f729.css",
-    "main.js": "/group-benefits-2024/static/js/main.5389c717.js",
+    "main.css": "/group-benefits-2024/static/css/main.3b883907.css",
+    "main.js": "/group-benefits-2024/static/js/main.cd07e2fe.js",
     "static/media/banner2.png": "/group-benefits-2024/static/media/banner2.b51a26dbb120bbf748fb.png",
+    "static/media/luke-porter-NEqEC7qa9FM-unsplash.png": "/group-benefits-2024/static/media/luke-porter-NEqEC7qa9FM-unsplash.b42f9bcc6717430df36c.png",
+    "static/media/rainbow.jpg": "/group-benefits-2024/static/media/rainbow.5361b188387dccbef386.jpg",
+    "static/media/banner10.png": "/group-benefits-2024/static/media/banner10.a832bd235270d6850539.png",
+    "static/media/balloon-fiesta.jpg": "/group-benefits-2024/static/media/balloon-fiesta.6a089c6c52b7d05d54b5.jpg",
+    "static/media/tim-mossholder-H6eaxcGNQbU-unsplash.jpg": "/group-benefits-2024/static/media/tim-mossholder-H6eaxcGNQbU-unsplash.ec926ea8ca194ba6c972.jpg",
+    "static/media/national-cancer-institute-L8tWZT4CcVQ-unsplash.jpg": "/group-benefits-2024/static/media/national-cancer-institute-L8tWZT4CcVQ-unsplash.eddb7f5312a04c106375.jpg",
+    "static/media/sam-moghadam-khamseh-2rrsfMN4hn8-unsplash.jpg": "/group-benefits-2024/static/media/sam-moghadam-khamseh-2rrsfMN4hn8-unsplash.f1b13e182c151fb24dce.jpg",
+    "static/media/bret-kavanaugh-MIfUp3FA5ek-unsplash.jpg": "/group-benefits-2024/static/media/bret-kavanaugh-MIfUp3FA5ek-unsplash.5855f9bd1013196b40ad.jpg",
     "static/media/logo.png": "/group-benefits-2024/static/media/logo.c87e9f46ed8927f1ac2d.png",
     "index.html": "/group-benefits-2024/index.html",
-    "main.2b70f729.css.map": "/group-benefits-2024/static/css/main.2b70f729.css.map",
-    "main.5389c717.js.map": "/group-benefits-2024/static/js/main.5389c717.js.map"
+    "main.3b883907.css.map": "/group-benefits-2024/static/css/main.3b883907.css.map",
+    "main.cd07e2fe.js.map": "/group-benefits-2024/static/js/main.cd07e2fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b70f729.css",
-    "static/js/main.5389c717.js"
+    "static/css/main.3b883907.css",
+    "static/js/main.cd07e2fe.js"
   ]
 }
