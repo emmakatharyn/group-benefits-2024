@@ -1,4 +1,5 @@
-gh-pages homepage URL: 'https://ereed-erisa.github.io/group-benefits-2024/
+gh-pages is too confusing so i'm using netlify: https://preeminent-faun-dcfab7.netlify.app/
+deploys from github repo.
 
 # Getting Started with Create React App
 
