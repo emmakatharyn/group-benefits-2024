@@ -1,6 +1,7 @@
 // import { Carousel } from "../Carousel/Carousel";
 // import "../Carousel/carousel.css";
 import { useState } from "react";
+import styles from "./Carousel.module.css";
 
 function Home() {
   //   return <Carousel />;
@@ -106,42 +107,42 @@ const Carousel = () => {
   };
 
   return (
-    <div className='App'>
-      <div className='carousel-container'>
-        <div className='carousel'>
+    <div className={styles.App}>
+      <div className={styles.carouselContainer}>
+        <div className={styles.carousel}>
           <div
-            className='inner'
+            className={styles.inner}
             style={{ transform: `translate(-${activeIdx * 100}%)` }}
           >
             {items.map((item, index) => (
               <CarouselItem key={index} item={item} />
             ))}
           </div>
-          <div className='carousel-buttons'>
+          <div className={styles.carouselButtons}>
             <button
               onClick={() => {
                 updateIndex(activeIdx - 1);
               }}
-              className='button-arrow'
+              className={styles.buttonArrow}
             >
               <span className={`material-symbols-outlined`}>
                 arrow_back_ios
               </span>
             </button>
-            <div className='indicators'>
+            <div className={styles.indicators}>
               {items.map((item, index) => (
                 <button
                   key={index}
                   onClick={() => {
                     updateIndex(index);
                   }}
-                  className='indicator-buttons'
+                  className={styles.indicatorButtons}
                 >
                   <span
                     className={`material-symbols-outlined ${
                       index === activeIdx
-                        ? "indicator-symbol-active"
-                        : "indicator-symbol"
+                        ? styles.indicatorSymbolActive
+                        : styles.indicatorSymbol
                     }`}
                   >
                     radio_button_checked
@@ -153,7 +154,7 @@ const Carousel = () => {
               onClick={() => {
                 updateIndex(activeIdx + 1);
               }}
-              className='button-arrow'
+              className={styles.buttonArrow}
             >
               <span className='material-symbols-outlined'>
                 arrow_forward_ios
@@ -161,12 +162,12 @@ const Carousel = () => {
             </button>
           </div>
         </div>
-        <div className='vertical-list'>
+        <div className={styles.verticalList}>
           {items.map((item, index) => (
             <div
               key={index}
-              className={`list-item ${
-                index === activeIdx ? "list-item-active" : ""
+              className={`${styles.listItem} ${
+                index === activeIdx ? styles.listItemActive : ""
               }`}
               onClick={() => updateIndex(index)}
             >
@@ -238,14 +239,14 @@ const CarouselItem = ({ item }) => {
   };
 
   return (
-    <div className='carousel-item' style={gradientOverlay}>
+    <div className={styles.carouselItem} style={gradientOverlay}>
       {/* <div></div> */}
       <div>
         <h4>{item.title}</h4>
-        <div className='carousel-item-text'>{`${
+        <div className={styles.carouselItemText}>{`${
           item.description ? item.description : ""
         }`}</div>
-        <a href={item.link} className='btn news-btn'>
+        <a href={item.link} className={`${styles.btn} ${styles.newsBtn}`}>
           Learn more
         </a>
       </div>
