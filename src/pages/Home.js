@@ -9,16 +9,16 @@ function Home() {
     <div>
       <Carousel />
       {/* update home address direct link */}
-      <div class='floater-box'>
+      <div className='floater-box'>
         <a href='employeePortalSub3.html'>
           Click Here to Update Your Home Address!
         </a>
       </div>
       {/* quick links */}
-      <div class='quicklinks-container'>
+      <div className='quicklinks-container'>
         <a
           href='employeePortal.html'
-          class='btn btn-primary quicklink'
+          className='btn btn-primary quicklink'
           style={{
             backgroundImage: `linear-gradient(45deg, #1d1e53af, #2d46b486), url('images/white-sands-5075995_960_720.jpg')`,
           }}
@@ -27,7 +27,7 @@ function Home() {
         </a>
         <a
           href='employerResources.html'
-          class='btn btn-primary quicklink'
+          className='btn btn-primary quicklink'
           style={{
             backgroundImage: `linear-gradient(45deg, #1d1e53af, #2d46b486),
             url('images/new-mexico-2499015_960_720.jpg')`,
@@ -37,7 +37,7 @@ function Home() {
         </a>
         <a
           href='benefitsInformation.html'
-          class='btn btn-primary quicklink'
+          className='btn btn-primary quicklink'
           style={{
             backgroundImage: `linear-gradient(45deg, #1d1e53af, #2d46b486),
             url('images/pic3.jpg')`,
@@ -47,7 +47,7 @@ function Home() {
         </a>
         <a
           href='documents/Emply_Trifold_6_28_7_18.pdf'
-          class='btn btn-primary quicklink'
+          className='btn btn-primary quicklink'
           style={{
             backgroundImage: `linear-gradient(45deg, #1d1e53af, #2d46b486),
             url('images/pic4.jpg')`,
@@ -57,22 +57,22 @@ function Home() {
         </a>
       </div>
       {/* about us */}
-      <div id='aboutUs' class='mt-5'>
+      <div id='aboutUs' className='mt-5'>
         <img
-          class='img-fluid'
+          className='img-fluid'
           src='images/carrie-borden-BkJGgpSY0JA-unsplash.jpg'
           alt='white sands'
         />
-        <div class='text-content py-5'>
-          <div class='d-flex align-items-center gap-3'>
+        <div className='text-content py-5'>
+          <div className='d-flex align-items-center gap-3'>
             <img
               src='images/ebbhands.png'
               alt='EBB logo'
               style={{ maxHeight: "89px" }}
             />
-            <h3 class='display-5 my-3'>About Us</h3>
+            <h3 className='display-5 my-3'>About Us</h3>
           </div>
-          <p class='my-4'>
+          <p className='my-4'>
             Welcome to the State of New Mexico's Employee Benefits Website. We
             offer competitive, comprehensive medical, dental, vision,
             pharmaceutical, Employee Assistance Program, basic and supplemental
@@ -80,7 +80,7 @@ function Home() {
             to enhance the lives of our employees and their qualified family
             members.
           </p>
-          <p class='lead'>
+          <p className='lead'>
             Employee Benefits Bureau &mdash; Providing the employees of the
             State of New Mexico and participating Local Public Bodies the tools
             to live a happier, healthier life.
