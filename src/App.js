@@ -17,6 +17,7 @@ import {
 } from "react-router-dom";
 
 import "./App.css";
+import BenefitsInformation from "./pages/BenefitsInformation";
 // import Button from "react-bootstrap/Button";
 
 const router = createBrowserRouter(
@@ -47,10 +48,7 @@ const router = createBrowserRouter(
         path='qualifying-event-lpb'
         element={<div>employeeportalsub5 content here!!!! (QE lpb)</div>}
       />
-      <Route
-        path='benefits-info'
-        element={<div>Benefits Information Grid</div>}
-      />
+      <Route path='benefits-info' element={<BenefitsInformation />} />
 
       <Route path='share' element={<div>employeePortalSub3 (SHARE)</div>} />
 
