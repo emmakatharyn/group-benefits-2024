@@ -3,7 +3,8 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
 import carriers from "./carriers";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Banner from "../components/Banner";
 
 function CarriersInfoGrid() {
   const [show, setShow] = useState(false);
@@ -15,20 +16,35 @@ function CarriersInfoGrid() {
     setShow(true);
   };
 
+  const categoryDisplayNames = {
+    openEnrollmentPY24: "Open Enrollment 2024",
+    openEnrollmentPY23: "Open Enrollment 2023",
+    generalInfo: "General Information",
+    presentationsRec: "Presentations and Recordings",
+    blurbCopyVolBen: "SoNM Voluntary Benefit Plan Options",
+  };
+
   const renderCategory = (categoryName, categoryData) => {
+    const displayName = categoryDisplayNames[categoryName] || categoryName;
+    if (selectedCarrier.content.banner) {
+      console.log("has banner");
+      return <Banner selectedCarrier={selectedCarrier} />;
+    }
     return (
       <>
-        <h4>{categoryName}</h4>
-        <ul>
-          {categoryData.map((item, index) => (
-            <li key={index}>
-              <i className={`bx ${item.iconClass}`}></i>
-              <a href={item.url} target='_blank' rel='noopener noreferrer'>
-                {item.linkName}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {categoryName !== "banner" && <h4>{displayName}</h4>}
+        {categoryName !== "banner" && (
+          <ul>
+            {categoryData.map((item, index) => (
+              <li key={index}>
+                <i className={`bx ${item.iconClass}`}></i>
+                <a href={item.url} target='_blank' rel='noopener noreferrer'>
+                  {item.linkName}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </>
     );
   };
@@ -42,23 +58,24 @@ function CarriersInfoGrid() {
         {carriers.map((carrier, index) => (
           <div className='col-sm-4 col-md-3 mb-3 mb-sm-0' key={carrier.modalID}>
             <div className='card text-center'>
-              {/* <Link
-                to={carrier.webAddress}
-                target='_blank'
-                className='d-flex align-items-center'
-              > */}
-              <img
-                src={carrier.imgURL}
-                className='card-img-top p-2 mx-auto'
-                alt={`${carrier.carrierName} logo`}
-                style={{
-                  width: "75%",
-                  marginTop: "12px",
-                  maxHeight: "152px",
-                }}
-              />
-              {/* </Link> */}
               <div className='card-body'>
+                <Link
+                  to={carrier.webAddress}
+                  target='_blank'
+                  className='d-flex align-items-center justify-content-center'
+                >
+                  <img
+                    src={carrier.imgURL}
+                    className='card-img-top p-2 mx-auto'
+                    alt={`${carrier.carrierName} logo`}
+                    // style={{
+                    //   width: "75%",
+                    //   marginTop: "12px",
+                    //   maxHeight: "152px",
+                    // }}
+                  />
+                </Link>
+
                 <h5 className='card-title'>{carrier.carrierName}</h5>
 
                 <Button variant='light' onClick={() => handleShow(carrier)}>
@@ -71,7 +88,16 @@ function CarriersInfoGrid() {
       </div>
       <Modal size='lg' show={show} onHide={handleClose} fullscreen='md-down'>
         <Modal.Header closeButton>
-          <Modal.Title>{selectedCarrier?.carrierName}</Modal.Title>
+          <Modal.Title>
+            <Link to={selectedCarrier?.webAddress} target='_blank'>
+              <img
+                src={selectedCarrier?.imgURL}
+                style={{ height: "auto", marginRight: "8px" }}
+                alt={selectedCarrier?.carrierName}
+              />
+            </Link>
+            {selectedCarrier?.carrierName}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {selectedCarrier && (

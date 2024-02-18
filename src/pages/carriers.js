@@ -229,7 +229,7 @@ const carriers = [
     carrierName: "Blue Cross Blue Shield NM",
     imgURL:
       "https://www.bcbsnm.com/content/dam/bcbs/retail/images/logo/large-header-logo_nm.png",
-    webAddress: "",
+    webAddress: "https://www.bcbsnm.com/sonm",
     modalID: "bcbsNM",
     content: {
       openEnrollmentPY24: [
@@ -350,7 +350,7 @@ const carriers = [
         },
         {
           linkName:
-            "Salud mental digital - Participe en un programa de salud mental... en l&iacute;nea!",
+            "Salud mental digital - Participe en un programa de salud mental... en línea!",
           url: "/Documents/NM-SP-Group-Behavioral-Health-Digital-Mental-Health-Member-Flier.pdf",
           iconClass: "bxs-file-pdf",
         },
@@ -360,7 +360,7 @@ const carriers = [
           iconClass: "bxs-file-pdf",
         },
         {
-          linkName: "M&aacute;s recursos para su bienestar mental",
+          linkName: "Más recursos para su bienestar mental",
           url: "/documents/NM-SP-Group-Behavioral-Health-2022-All-Resources-Member-Flier.pdf",
           iconClass: "bxs-file-pdf",
         },
@@ -1123,7 +1123,32 @@ const carriers = [
     imgURL: "/images/virta_pres_bcbs_logo.png",
     webAddress: "https://www.virtahealth.com/join/sonm",
     modalID: "virtaModal",
-    content: {},
+    content: {
+      banner: [
+        {
+          linkName: "Virta Clickable Banner",
+          url: "https://www.virtahealth.com/join/sonm?utm_source=HRemail&utm_campaign=2023-Q4-Legacy&utm_content=BMIReduction&utm_medium=WP-StateofNM",
+          imgSrc: "images/image005VIRTA.png",
+        },
+      ],
+      generalInfo: [
+        {
+          linkName: "Learn more or get started with Virta",
+          url: "https://www.virtahealth.com/join/sonm?utm_source=HRemail&utm_campaign=2023-Q4-Legacy&utm_content=BMIReduction&utm_medium=WP-StateofNM",
+          iconClass: "bx-link",
+        },
+        {
+          linkName: "Virta Results Calculator",
+          url: "https://www.virtahealth.com/join/sonm?utm_source=HRemail&utm_campaign=2024-Q1-Legacy&utm_content=BestYou&utm_medium=WP-SoNM#results",
+          iconClass: "bx-link",
+        },
+        {
+          linkName: "Virta Informational Webinar Schedule",
+          url: "/documents/2024_virta_webinar_schedule.pdf",
+          iconClass: "bxs-file-pdf",
+        },
+      ],
+    },
   },
   // Omada - slight variation in content
   {
@@ -1131,7 +1156,20 @@ const carriers = [
     imgURL: "/images/omada_cigna_logo.jpg",
     webAddress: "https://go.omadahealth.com/sonm",
     modalID: "omadaModal",
-    content: {},
+    content: {
+      generalInfo: [
+        {
+          linkName: "State of NM Omada Overview",
+          url: "documents/State_of_NM_Cigna_2024_Omada_Overview.pdf",
+          iconClass: "bxs-file-pdf",
+        },
+        {
+          linkName: "Learn more or get started with Omada",
+          url: "https://go.omadahealth.com/sonm",
+          iconClass: "bx-link",
+        },
+      ],
+    },
   },
   // Voluntary Benefits - has no content; click on button goes to volben page
   {
@@ -1139,7 +1177,23 @@ const carriers = [
     imgURL: "/images/2019open.jpg",
     webAddress: "volben.html",
     modalID: "voluntaryBenefits",
-    content: {},
+    content: {
+      blurbCopyVolBen: [
+        {
+          header: "",
+          body: "Voluntary Benefits, a new addition to the SoNM Group Benefit Plan! The Employee Benefits Bureau brings to our SoNM and Local Public Body employees additional insurance options from three amazing carriers. This additional coverage can help with life’s unexpected situations, and bring a little more peace of mind.",
+          link: "",
+        },
+      ],
+      generalInfo: [
+        {
+          linkName:
+            "Click here to visit the Voluntary Benefits information page",
+          url: "volben.html",
+          iconClass: "bx-link",
+        },
+      ],
+    },
   },
   //Wondr Health Program (BCBS) - slight variation in content
   {
