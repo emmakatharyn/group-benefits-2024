@@ -1157,6 +1157,13 @@ const carriers = [
     webAddress: "https://go.omadahealth.com/sonm",
     modalID: "omadaModal",
     content: {
+      banner: [
+        {
+          linkName: "Omada Clickable Banner",
+          url: "documents/State_of_NM_Cigna_2024_Omada_Overview.pdf",
+          imgSrc: "images/thumbnail_image002_omada.png",
+        },
+      ],
       generalInfo: [
         {
           linkName: "State of NM Omada Overview",

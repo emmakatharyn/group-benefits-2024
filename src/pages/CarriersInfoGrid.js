@@ -26,13 +26,13 @@ function CarriersInfoGrid() {
 
   const renderCategory = (categoryName, categoryData) => {
     const displayName = categoryDisplayNames[categoryName] || categoryName;
-    if (selectedCarrier.content.banner) {
-      console.log("has banner");
-      return <Banner selectedCarrier={selectedCarrier} />;
-    }
+    // if (selectedCarrier.content.banner) {
+    //   console.log("has banner");
+    //   return <Banner selectedCarrier={selectedCarrier} />;
+    // }
     return (
       <>
-        {categoryName !== "banner" && <h4>{displayName}</h4>}
+        {categoryName !== "banner" && <h4 className='py-2'>{displayName}</h4>}
         {categoryName !== "banner" && (
           <ul>
             {categoryData.map((item, index) => (
@@ -100,6 +100,9 @@ function CarriersInfoGrid() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          {selectedCarrier?.content.banner && (
+            <Banner selectedCarrier={selectedCarrier} />
+          )}
           {selectedCarrier && (
             <>
               {Object.entries(selectedCarrier.content).map(

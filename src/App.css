@@ -309,6 +309,14 @@ h5.modal-title {
   max-width: 120px;
 }
 
+.modal-banner-img {
+  width: 100%;
+}
+
+.modal-banner-link {
+  margin-bottom: 12px;
+}
+
 .modal-body h6 {
   font-size: 20px;
 }
