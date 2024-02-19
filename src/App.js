@@ -18,6 +18,7 @@ import {
 } from "react-router-dom";
 
 import "./App.css";
+import DomesticPartnership from "./pages/DomesticPartnership";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,12 +27,7 @@ const router = createBrowserRouter(
       <Route path='home' element={<Home />} />
 
       <Route path='admin-letters' element={<AdministrativeLetters />} />
-      <Route
-        path='domestic-partnership'
-        element={
-          <div>employerResourcesSub1.html (Domestic Partnership Forms)</div>
-        }
-      />
+      <Route path='domestic-partnership' element={<DomesticPartnership />} />
       <Route path='employees' element={<Employees />} />
       <Route path='employers' element={<Employers />} />
       <Route path='enrollment' element={<Enrollment />} />
@@ -51,10 +47,6 @@ const router = createBrowserRouter(
 
       <Route path='share' element={<div>employeePortalSub3 (SHARE)</div>} />
 
-      <Route
-        path='qualifying-event-lpb'
-        element={<div> employeePortalSub5 QE for LPB and Legislators</div>}
-      />
       <Route
         path='term-life-calculator'
         element={<div>TermLifePremiumCal.html</div>}
