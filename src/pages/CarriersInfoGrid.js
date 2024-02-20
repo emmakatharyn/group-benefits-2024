@@ -1,16 +1,18 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-import carriers from "./carriers";
-import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
+
+import carriers from "./carriers";
 
 function CarriersInfoGrid() {
   const [show, setShow] = useState(false);
   const [selectedCarrier, setSelectedCarrier] = useState(null);
 
   const handleClose = () => setShow(false);
+
   const handleShow = (carrier) => {
     setSelectedCarrier(carrier);
     setShow(true);
@@ -24,15 +26,16 @@ function CarriersInfoGrid() {
     blurbCopyVolBen: "SoNM Voluntary Benefit Plan Options",
   };
 
+  // categoryName: e.g. banner, generalInfo, openEnrollmentPY24, etc.
   const renderCategory = (categoryName, categoryData) => {
     const displayName = categoryDisplayNames[categoryName] || categoryName;
-    // if (selectedCarrier.content.banner) {
-    //   console.log("has banner");
-    //   return <Banner selectedCarrier={selectedCarrier} />;
-    // }
+
     return (
       <>
+        {/* as long as category is not 'banner', show displayName as heading */}
         {categoryName !== "banner" && <h4 className='py-2'>{displayName}</h4>}
+
+        {/* as long as category is not 'banner', map over the category's array of objects representing various resources, displaying each as a <li> link */}
         {categoryName !== "banner" && (
           <ul>
             {categoryData.map((item, index) => (
@@ -55,8 +58,9 @@ function CarriersInfoGrid() {
         <h1 className='my-5 display-5 text-center'>Benefits Information</h1>
       </div>
       <div className='row justify-content-center gap-2 my-4 mt-5'>
+        {/* show grid of carrier tiles */}
         {carriers.map((carrier, index) => (
-          <div className='col-sm-4 col-md-3 mb-3 mb-sm-0' key={carrier.modalID}>
+          <div className='col-sm-4 col-md-3 mb-3 mb-sm-0' key={index}>
             <div className='card text-center'>
               <div className='card-body'>
                 <Link
@@ -68,11 +72,6 @@ function CarriersInfoGrid() {
                     src={carrier.imgURL}
                     className='card-img-top p-2 mx-auto'
                     alt={`${carrier.carrierName} logo`}
-                    // style={{
-                    //   width: "75%",
-                    //   marginTop: "12px",
-                    //   maxHeight: "152px",
-                    // }}
                   />
                 </Link>
 
