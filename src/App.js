@@ -19,6 +19,7 @@ import {
 
 import "./App.css";
 import DomesticPartnership from "./pages/DomesticPartnership";
+import POPwaivers from "./pages/POPwaivers";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,7 +34,7 @@ const router = createBrowserRouter(
       <Route path='enrollment' element={<Enrollment />} />
       <Route path='contact' element={<Contact />} />
       <Route path='state-agency-employees' element={<StateAgencyEmployees />} />
-      <Route path='pop-waivers' element={<div>POPwaivers.html</div>} />
+      <Route path='pop-waivers' element={<POPwaivers />} />
       <Route
         path='qualifying-event-state'
         element={<div>employeeportalsub2 content here!!!! (QE state)</div>}
