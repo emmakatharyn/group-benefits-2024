@@ -27,7 +27,6 @@ function POPwaivers() {
           className='btn btn-primary quicklink'
         >
           <i className='bx bxs-file-pdf'></i>
-          <br />
           POP Waiver Form (State Employee)
         </a>
 
@@ -36,7 +35,6 @@ function POPwaivers() {
           className='btn btn-primary quicklink'
         >
           <i className='bx bxs-file-pdf'></i>
-          <br />
           POP Waiver Form (LPB Employee)
         </a>
       </div>

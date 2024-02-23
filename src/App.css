@@ -370,6 +370,7 @@ h5.modal-title {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
+  padding: 0;
 }
 
 .portal-grid .btn.btn-primary.quicklink {
@@ -383,6 +384,7 @@ h5.modal-title {
 }
 
 .portal-grid i {
+  font-size: 36px;
   color: #3278c4;
 }
 
