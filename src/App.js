@@ -20,30 +20,26 @@ import {
 import "./App.css";
 import DomesticPartnership from "./pages/DomesticPartnership";
 import POPwaivers from "./pages/POPwaivers";
+import QualifyingEventState from "./pages/QualifyingEventState";
+import QualifyingEventLPB from "./pages/QualifyingEventLPB";
+import LocalPublicBodyEmployees from "./pages/LocalPublicBodyEmployees";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Root />}>
       <Route index element={<Home />} />
       <Route path='home' element={<Home />} />
-
       <Route path='admin-letters' element={<AdministrativeLetters />} />
       <Route path='domestic-partnership' element={<DomesticPartnership />} />
       <Route path='employees' element={<Employees />} />
       <Route path='employers' element={<Employers />} />
       <Route path='enrollment' element={<Enrollment />} />
       <Route path='contact' element={<Contact />} />
+      <Route path='lpb-employees' element={<LocalPublicBodyEmployees />} />
       <Route path='state-agency-employees' element={<StateAgencyEmployees />} />
       <Route path='pop-waivers' element={<POPwaivers />} />
-      <Route
-        path='qualifying-event-state'
-        element={<div>employeeportalsub2 content here!!!! (QE state)</div>}
-      />
-
-      <Route
-        path='qualifying-event-lpb'
-        element={<div>employeeportalsub5 content here!!!! (QE lpb)</div>}
-      />
+      <Route path='qualifying-event-state' element={<QualifyingEventState />} />
+      <Route path='qualifying-event-lpb' element={<QualifyingEventLPB />} />
       <Route path='benefits-info' element={<CarriersInfoGrid />} />
 
       <Route path='share' element={<div>employeePortalSub3 (SHARE)</div>} />
