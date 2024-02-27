@@ -11,7 +11,7 @@ export default function Employees() {
   return (
     <div className='container p-0 text-center'>
       <h1 className='my-4 ps-2 display-5'>Employee Information Resources</h1>
-      <p clasNames='ps-2'>Please select one:</p>
+      <p className='ps-2'>Please select one:</p>
       <div className='select-one-box py-5 my-3'>
         <button
           className={`btn ${selectedOption === "state" ? "on" : ""}`}
