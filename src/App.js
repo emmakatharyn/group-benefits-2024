@@ -23,6 +23,7 @@ import POPwaivers from "./pages/POPwaivers";
 import QualifyingEventState from "./pages/QualifyingEventState";
 import QualifyingEventLPB from "./pages/QualifyingEventLPB";
 import LocalPublicBodyEmployees from "./pages/LocalPublicBodyEmployees";
+import Share from "./pages/SHARE";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -42,7 +43,7 @@ const router = createBrowserRouter(
       <Route path='qualifying-event-lpb' element={<QualifyingEventLPB />} />
       <Route path='benefits-info' element={<CarriersInfoGrid />} />
 
-      <Route path='share' element={<div>employeePortalSub3 (SHARE)</div>} />
+      <Route path='share' element={<Share />} />
 
       <Route
         path='term-life-calculator'
