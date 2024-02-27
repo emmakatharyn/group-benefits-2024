@@ -374,6 +374,7 @@ h5.modal-title {
 }
 
 .portal-grid .btn.btn-primary.quicklink {
+  height: 212px;
   flex-direction: column;
   align-self: center;
   align-items: center;
@@ -386,6 +387,7 @@ h5.modal-title {
 .portal-grid i {
   font-size: 36px;
   color: #3278c4;
+  margin-bottom: 8px;
 }
 
 .portal-grid .btn.btn-primary.quicklink:nth-child(2n),
