@@ -21,14 +21,7 @@ function Employers() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to='AdministrativeLetters.html'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  {" "}
-                  Administrative Letters
-                </Link>
+                <Link to='/admin-letters'> Administrative Letters</Link>
               </li>
               <li>
                 <Link
@@ -113,9 +106,7 @@ function Employers() {
                 </Link>
               </li>
               <li>
-                <Link to='./Disability.html' target='_blank' rel='noreferrer'>
-                  Disability Policy
-                </Link>
+                <Link to='/disability'>Disability Policy</Link>
               </li>
               <li>
                 <Link
@@ -127,25 +118,15 @@ function Employers() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to='./employerResourcesSub1.html'
-                  target='_blank'
-                  rel='noreferrer'
-                >
+                <Link to='/domestic-partnership'>
                   Domestic Partnership Form
                 </Link>
               </li>
               <li>
-                <Link
-                  to='./employeePortal.html'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Employee Enrollment Resources
-                </Link>
+                <Link to='/employees'>Employee Enrollment Resources</Link>
               </li>
               <li>
-                <Link to='./PremiumsDue.html' target='_blank' rel='noreferrer'>
+                <Link to='/premiums-due'>
                   LWOP Benefit Premium Transmittal Form
                 </Link>
               </li>
@@ -169,13 +150,7 @@ function Employers() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/PremiumRatesSAE.html'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  PREMIUM RATE SHEETS – STATE
-                </Link>
+                <Link to='/SAE-premium-rates'>PREMIUM RATE SHEETS – STATE</Link>
               </li>
               <li>
                 <Link
@@ -246,9 +221,7 @@ function Employers() {
                 </Link>
               </li>
               <li>
-                <Link to='./BenefitsInformation.html'>
-                  Benefits Information
-                </Link>
+                <Link to='/benefits-info'>Benefits Information</Link>
               </li>
               <li>
                 <Link to='./CarrierContacts.html'>Benefit Plan Contacts</Link>
@@ -262,7 +235,7 @@ function Employers() {
                 <Link to='./COBRA.html'>COBRA Resources Page</Link>
               </li>
               <li>
-                <Link to='./Disability.html'>Disability Resources Page</Link>
+                <Link to='/disability'>Disability Resources Page</Link>
               </li>
               <li>
                 <Link to='./FGPOpenFPN.html'>
@@ -289,9 +262,7 @@ function Employers() {
                 </Link>
               </li>
               <li>
-                <Link to='./employeePortalSub3.html' target='_blank'>
-                  SHARE Self Service Instruction Guide
-                </Link>
+                <Link to='/share'>SHARE Self Service Instruction Guide</Link>
               </li>
               <li>
                 <Link

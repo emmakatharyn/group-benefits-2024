@@ -24,6 +24,9 @@ import QualifyingEventState from "./pages/QualifyingEventState";
 import QualifyingEventLPB from "./pages/QualifyingEventLPB";
 import LocalPublicBodyEmployees from "./pages/LocalPublicBodyEmployees";
 import Share from "./pages/SHARE";
+import Disability from "./pages/Disability";
+import COBRA from "./pages/COBRA";
+import CarrierContacts from "./pages/CarrierContacts";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,17 +34,25 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path='home' element={<Home />} />
       <Route path='admin-letters' element={<AdministrativeLetters />} />
+      <Route path='disability' element={<Disability />} />
       <Route path='domestic-partnership' element={<DomesticPartnership />} />
       <Route path='employees' element={<Employees />} />
       <Route path='employers' element={<Employers />} />
       <Route path='enrollment' element={<Enrollment />} />
+      <Route path='cobra' element={<COBRA />} />
       <Route path='contact' element={<Contact />} />
+      <Route path='carrier-contacts' element={<CarrierContacts />} />
       <Route path='lpb-employees' element={<LocalPublicBodyEmployees />} />
       <Route path='state-agency-employees' element={<StateAgencyEmployees />} />
       <Route path='pop-waivers' element={<POPwaivers />} />
       <Route path='qualifying-event-state' element={<QualifyingEventState />} />
       <Route path='qualifying-event-lpb' element={<QualifyingEventLPB />} />
       <Route path='benefits-info' element={<CarriersInfoGrid />} />
+      <Route path='premiums-due' element={<h1>FMLA & LWOP Premiums Dues</h1>} />
+      <Route
+        path='SAE-premium-rates'
+        element={<div>State agency employee premiums</div>}
+      />
 
       <Route path='share' element={<Share />} />
 

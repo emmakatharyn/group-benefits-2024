@@ -496,6 +496,13 @@ h5.modal-title {
   }
 }
 
+.side-by-side {
+  width: 80vw;
+}
+.contact-info p {
+  line-height: 1;
+}
+
 @media screen and (max-width: 782px) {
   .quicklinks-container {
     flex-direction: column;
@@ -513,6 +520,32 @@ h5.modal-title {
   .list-box li a:visited {
     font-size: 22px;
   }
+}
+
+/* carrier contacts table */
+.tableStyle {
+  border: 1px solid #dfdfdf;
+  display: table;
+  width: 100%;
+}
+.tableStyle th {
+  font-weight: normal;
+  background-color: #deeaf6;
+  color: #006fc0;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold !important;
+}
+.tableStyle td,
+.tableStyle th {
+  border: 1px solid #dfdfdf;
+  padding: 5px 10px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tableStyle td {
+  color: #337ab7;
 }
 
 @media screen and (max-width: 600px) {
