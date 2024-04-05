@@ -4,7 +4,7 @@ function Contact() {
   return (
     <div className='py-3 my-4'>
       <Link
-        to='carrierContacts'
+        to='/carrier-contacts'
         className='centered-link text-center my-4 mb-4'
       >
         CARRIER PLAN CONTACTS
@@ -31,9 +31,9 @@ function Contact() {
         <div className='contact-box'>
           <h6>Email</h6>
           <p>
-            <a href='mailto:SONM@easitpa.com'>SONM@easitpa.com</a>
+            <Link to='mailto:SONM@easitpa.com'>SONM@easitpa.com</Link>
             <br />
-            <a href='mailto:FSA@easitpa.com'>FSA@easitpa.com</a>
+            <Link to='mailto:FSA@easitpa.com'>FSA@easitpa.com</Link>
           </p>
         </div>
         <div className='contact-box'>
