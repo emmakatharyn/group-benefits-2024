@@ -1,57 +1,44 @@
-import { Link } from "react-router-dom";
+import ListBox from "./ListBox";
 
+// this used to be the lpb ee grid on employeePortal.html
 function LPBEmployees() {
+  const lpbGeneralLinks = [
+    { linkText: "I am a New Hire", url: "/lpb-employees" },
+    { linkText: "I have a Qualifying Event", url: "/qualifying-event-lpb" },
+    { linkText: "Benefits Information", url: "/benefits-info" },
+    { linkText: "SHARE Self Service Manual", url: "/share" },
+    { linkText: "Special Rules: LWOP, FMLA and More", url: "/admin-letters" },
+  ];
+
+  const lpbFormsDocs = [
+    {
+      linkText: "Affidavit of Domestic Partnership",
+      url: "/documents/Affidavit_Domestic_Partner_092223.pdf",
+    },
+    {
+      linkText: "Termination of Domestic Partnership",
+      url: "/documents/Domestic_Partnership_Termination_092223.pdf",
+    },
+    {
+      linkText: "POP Waiver Form (State)",
+      url: "/documents/Aetna_Network_Flyer_proof_2.pdf",
+    },
+  ];
+
+  const lpbNewHireQEInfo = [
+    {
+      linkText: "New Hire Orientation Presentation (pdf) - English",
+      url: "/movies/Presentation_Recording_2021-12-30-14-EKR-REsp.mp4",
+    },
+  ];
   return (
-    <div class='container portal-grid my-5' id='LPB-ee-grid'>
-      <Link to='LocalPublicBodyEmployee.html' class='btn btn-primary quicklink'>
-        <i class='bx bxs-folder-plus'></i>
-        <br />I am a New Hire
-      </Link>
-
-      <Link to='/qualifying-event-lpb' class='btn btn-primary quicklink'>
-        <i class='bx bxs-calendar-exclamation'></i>
-        <br />I have a Qualifying Event
-      </Link>
-
-      <Link
-        to='/movies/Presentation_Recording_2021-12-30-14-EKR-REsp.mp4'
-        class='btn btn-primary quicklink'
-      >
-        <i class='bx bxs-info-circle'></i>
-        <br />
-        New Hire & Qualifying Event Orientation
-      </Link>
-
-      <Link to='/benefits-info' class='btn btn-primary quicklink'>
-        <i class='bx bxs-file-doc'></i>
-        <br />
-        Benefits Information
-      </Link>
-
-      <Link to='/share' class='btn btn-primary quicklink'>
-        <i class='bx bx-book-open'></i>
-        <br />
-        SHARE Self Service Manual
-      </Link>
-      <Link to='/admin-letters' class='btn btn-primary quicklink'>
-        <i class='bx bxs-star'></i>
-        <br />
-        Special Rules: LWOP, FMLA and More
-      </Link>
-      <Link to='/domestic-partnership' class='btn btn-primary quicklink'>
-        <i class='bx bxs-file-pdf'></i>
-        <br />
-        Domestic Partnership Forms
-      </Link>
-      <Link
-        to='/documents/POP-SoNM-NOTICE-OF-WAIVER-2023.pdf'
-        class='btn btn-primary quicklink'
-        target='_blank'
-      >
-        <i class='bx bxs-pen'></i>
-        <br />
-        POP Waiver Form (LPB)
-      </Link>
+    <div class='container portal-grid mx-auto my-5' id='LPB-ee-grid'>
+      <ListBox title={"General Information"} links={lpbGeneralLinks} />
+      <ListBox title={"Forms and Documents"} links={lpbFormsDocs} />
+      <ListBox
+        title={"New Hire & Qualifying Event Orientation"}
+        links={lpbNewHireQEInfo}
+      />
     </div>
   );
 }
