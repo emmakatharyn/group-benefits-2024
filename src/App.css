@@ -29,6 +29,7 @@ li a:visited {
   font-size: 16px;
   text-decoration: none;
   color: #3587df;
+  line-height: 1;
 }
 
 li a:hover,
@@ -113,7 +114,7 @@ header.container-lg {
 /* carousel component styles here? */
 
 /* "CLICK HERE TO UPDATE HOME ADDRESS" ANIMATION */
-.floater-box {
+.slide-in-link {
   display: block;
   width: 100%;
   /* max-width: 960px; */
@@ -124,8 +125,8 @@ header.container-lg {
   animation: slidein 1s ease-in-out;
 }
 
-.floater-box a:link,
-.floater-box a:visited {
+.slide-in-link a:link,
+.slide-in-link a:visited {
   text-decoration: none;
   font-size: 22px;
   color: red;
@@ -133,8 +134,8 @@ header.container-lg {
   margin: 0 auto;
 }
 
-.floater-box a:hover,
-.floater-box a:active {
+.slide-in-link a:hover,
+.slide-in-link a:active {
   text-decoration: underline;
   color: rgb(253, 76, 76);
 }
@@ -369,7 +370,7 @@ h5.modal-title {
 .portal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
+  /* gap: 16px; */
   padding: 0;
 }
 
@@ -410,8 +411,8 @@ h5.modal-title {
 }
 
 .list-box {
-  width: 45%;
   padding: 12px;
+  text-align: left;
 }
 
 .list-box ul {
@@ -419,7 +420,8 @@ h5.modal-title {
 }
 
 .list-box li {
-  line-height: 2;
+  /* line-height: 2; */
+  margin-bottom: 1rem;
 }
 
 /* #getStarted .modal-body ul li,
@@ -498,6 +500,7 @@ h5.modal-title {
 
 .side-by-side {
   width: 80vw;
+  margin: 0 auto;
 }
 .contact-info p {
   line-height: 1;
@@ -563,8 +566,8 @@ h5.modal-title {
 }
 
 @media screen and (max-width: 480px) {
-  .floater-box a:link,
-  .floater-box a:visited {
+  .slide-in-link a:link,
+  .slide-in-link a:visited {
     font-size: 16px;
   }
 

@@ -2,31 +2,29 @@
 // import "../Carousel/carousel.css";
 import { useState } from "react";
 import styles from "./Carousel.module.css";
+import { Link } from "react-router-dom";
 
 function Home() {
-  //   return <Carousel />;
   return (
     <div>
       <Carousel />
       {/* update home address direct link */}
-      <div className='floater-box'>
-        <a href='employeePortalSub3.html'>
-          Click Here to Update Your Home Address!
-        </a>
+      <div className='slide-in-link'>
+        <Link to='/share'>Click Here to Update Your Home Address!</Link>
       </div>
       {/* quick links */}
       <div className='quicklinks-container'>
-        <a
-          href='employeePortal.html'
+        <Link
+          to='/employees'
           className='btn btn-primary quicklink'
           style={{
             backgroundImage: `linear-gradient(45deg, #1d1e53af, #2d46b486), url('images/white-sands-5075995_960_720.jpg')`,
           }}
         >
           Employee Resources
-        </a>
-        <a
-          href='employerResources.html'
+        </Link>
+        <Link
+          to='/employers'
           className='btn btn-primary quicklink'
           style={{
             backgroundImage: `linear-gradient(45deg, #1d1e53af, #2d46b486),
@@ -34,9 +32,9 @@ function Home() {
           }}
         >
           Employer Resources
-        </a>
-        <a
-          href='benefitsInformation.html'
+        </Link>
+        <Link
+          to='/benefits-info'
           className='btn btn-primary quicklink'
           style={{
             backgroundImage: `linear-gradient(45deg, #1d1e53af, #2d46b486),
@@ -44,9 +42,10 @@ function Home() {
           }}
         >
           Benefits Plan Information
-        </a>
-        <a
-          href='documents/Emply_Trifold_6_28_7_18.pdf'
+        </Link>
+        <Link
+          to='documents/Emply_Trifold_6_28_7_18.pdf'
+          target='_blank'
           className='btn btn-primary quicklink'
           style={{
             backgroundImage: `linear-gradient(45deg, #1d1e53af, #2d46b486),
@@ -54,7 +53,7 @@ function Home() {
           }}
         >
           Benefits at a Glance
-        </a>
+        </Link>
       </div>
       {/* about us */}
       <div id='aboutUs' className='mt-5'>
@@ -179,55 +178,52 @@ const Carousel = () => {
     </div>
   );
 };
-// news items
+// news items for Carousel
 const items = [
   {
     title: "Open Enrollment for Plan Year 2024",
-
     image: require("../Media/banner10.png"),
-    link: "openEnrollment.html",
+    link: "/open-enrollment",
   },
   {
     title: "LPB Premium Rates for January 1, 2024",
-
     image: require("../Media/balloon-fiesta.jpg"),
     link: "https://google.com/",
   },
   {
     title: "Newsletters and Updates",
-
     image: require("../Media/tim-mossholder-H6eaxcGNQbU-unsplash.jpg"),
     link: "modal",
   },
   {
-    title: "Stay Well Health Center by Proactive MD",
-
+    title: "No Cost VirtualCheckup by Catapult Health",
     image: require("../Media/rainbow.jpg"),
-    link: "https://healthcenters.proactive-md.com/state-of-new-mexico/stay-well-health-center-santa-fe/",
+    link: "documents/State of New Mexico - VC (Tasso) - Registration Poster.pdf",
+  },
+  {
+    title: "Employee 1095-C Important Information",
+    image: require("../Media/national-cancer-institute-L8tWZT4CcVQ-unsplash.jpg"),
+    link: "modal",
   },
   {
     title: "Virta and Omada Virtual Care",
-
     image: require("../Media/national-cancer-institute-L8tWZT4CcVQ-unsplash.jpg"),
     link: "modal",
   },
   {
     title: "COVID Vaccination Helpful Resources",
-
     image: require("../Media/sam-moghadam-khamseh-2rrsfMN4hn8-unsplash.jpg"),
     link: "modal",
   },
   {
     title: "Medical Providers Tier 1 and Tier 2 Networks",
-
     image: require("../Media/bret-kavanaugh-MIfUp3FA5ek-unsplash.jpg"),
     link: "https://nmpsia.com/",
   },
   {
-    title: "SONM Health and Wellness Initiative",
-
+    title: "SONM Heart Health Challenge",
     image: require("../Media/luke-porter-NEqEC7qa9FM-unsplash.png"),
-    link: "healthwellness.html",
+    link: "/documents/SoNM_Healthy_Heart_WT_2024.pdf",
   },
 ];
 
@@ -240,15 +236,14 @@ const CarouselItem = ({ item }) => {
 
   return (
     <div className={styles.carouselItem} style={gradientOverlay}>
-      {/* <div></div> */}
       <div>
         <h4>{item.title}</h4>
         <div className={styles.carouselItemText}>{`${
           item.description ? item.description : ""
         }`}</div>
-        <a href={item.link} className={`${styles.btn} ${styles.newsBtn}`}>
+        <Link to={item.link} className={`${styles.btn} ${styles.newsBtn}`}>
           Learn more
-        </a>
+        </Link>
       </div>
     </div>
   );

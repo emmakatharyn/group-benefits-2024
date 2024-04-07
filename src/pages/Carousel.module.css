@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   height: 75vh;
-  background-color: #85a8c5;
+  /* background-color: #85a8c5; */
 }
 .carousel {
   overflow: hidden;
@@ -18,20 +18,21 @@
   white-space: nowrap;
   transition: transform 0.3s;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 5px 5px #ddd;
 }
 
 .carouselItem {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 476px;
+  height: 478px;
   background-color: #fff;
   width: 100%;
 }
 
 .carouselItem h4 {
   color: #e5ebf1;
-  font-size: 32px;
+  /* font-size: 32px; */
 }
 
 .carouselItemText {
@@ -92,7 +93,7 @@
   flex-direction: column;
   align-items: flex-start;
   flex-basis: auto;
-  width: 40%;
+  width: 50%;
   height: 476px;
   border: 1px solid #ffffffa7;
   border-left: none;
@@ -100,11 +101,36 @@
 .listItem {
   width: 100%;
   cursor: pointer;
-  padding: 20px 10px;
+  padding: 16px 8px;
   background-color: #fff;
   transition: background-color 0.3s;
 }
 .listItemActive {
   background-color: #e6a020;
   color: #fff;
+}
+
+@media (max-width: 920px) {
+  .carouselContainer {
+    width: 100vw;
+  }
+  .carouselItem {
+    height: 488px;
+  }
+  .listItem {
+    padding: 12px 6px;
+  }
+
+  .verticalList {
+    height: 466px;
+  }
+}
+
+@media (max-width: 760px) {
+  .carousel {
+    width: auto;
+  }
+  .verticalList {
+    display: none;
+  }
 }
