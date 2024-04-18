@@ -1,5 +1,8 @@
 import React from "react";
 
+import "./App.css";
+import "./queries.css";
+
 import Root from "./Root";
 import Home from "./pages/Home";
 import Employees from "./pages/Employees";
@@ -17,7 +20,6 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-import "./App.css";
 import DomesticPartnership from "./pages/DomesticPartnership";
 import POPwaivers from "./pages/POPwaivers";
 import QualifyingEventState from "./pages/QualifyingEventState";
