@@ -109,7 +109,7 @@
   transition: background-color 0.3s;
 }
 .listItemActive {
-  background-color: #e6a020;
+  background-color: #007aff;
   color: #fff;
 }
 
