@@ -1,4 +1,211 @@
 import { Link } from "react-router-dom";
+const policiesDocsFormsList = [
+  {
+    displayText: "Administrative Guide",
+    path: "/documents/Administrative_Guide_2023_July_Final-edit-2.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "Administrative Letters",
+    path: "/admin-letters",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "Benefits Eligibility Acknowledgement Form (English)",
+    path: "/documents/Benefits_Eligibility_Acknowledgement_2023.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "Benefits Eligibility Acknowledgement Form (Espa\u00f1ol)",
+    path: "/documents/Benefits_Eligibility_Acknowledgement_2023_Spanish.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "Benefits Eligibility Acknowledgement Form - Waiving Benefits",
+    path: "/documents/Benefits_Eligibility_Acknowledgement_2023_Waiving_All_Benefits.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText:
+      "Benefits Eligibility Acknowledgement Form - Waiving Benefits (Espa\u00f1ol)",
+    path: "/documents/Benefits_Eligibility_Acknowledgement_2023_Waiving_All_Benefits_Spanish.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "COBRA Notification to Term Benefits",
+    path: "/Documents/COBRA_Notification_Form-Revised_6-8-2021.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "RMD Current Year Refund Request (Employee)",
+    path: "/documents/RMD_Current_Year_Refund_Request_Employee_Revised_2021.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "RMD Current Year Refund Request (Employer)",
+    path: "/documents/RMD_Current_Year_Refund_Request_ER-financial_Agency_(1)_(002).pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "Death Claim Form",
+    path: "/documents/State_of_New_Mexico_Life_Claim_Form.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "DFA Summary Page (Download)",
+    path: "/documents/DFA-Summary_Page_2020.xls",
+    iconClass: "bx bxs-file-doc",
+  },
+  {
+    displayText: "Disability Policy",
+    path: "/disability",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "Disability Calculation Sheet (Download)",
+    path: "/documents/Disability Calculation Sheet-Final.xlsx",
+    iconClass: "bx bxs-file-doc",
+  },
+  {
+    displayText: "Domestic Partnership Forms",
+    path: "/domestic-partnership",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "Employee Enrollment Resources",
+    path: "/employees",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "LWOP Benefit Premium Transmittal Form",
+    path: "/premiums-due",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText:
+      "Notification to Terminate Benefits Due to Non-Payment of Premiums",
+    path: "/documents/Notification_to_Term_Benefits_July2022.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "POP Waiver Form (State)",
+    path: "/Documents/POP-SoNM-NOTICE-OF-WAIVER-2023.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "PREMIUM RATE SHEETS – STATE",
+    path: "/SAE-premium-rates",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "RMD Prior Calendar Year Refund Request Form (Employee)",
+    path: "/Documents/RMD_Prior_Year_Refund_Request_Employee_Revised_2021.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "RMD Prior Calendar Year Refund Request Form (Agency)",
+    path: "/Documents/RMD_Prior_Year_Refund_Request_ER-financial_Agency_2.6.2020.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "W-9 Form Instructions",
+    path: "/documents/W-9_Example.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "W-9 New Form",
+    path: "/documents/W-9_New_Form.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  { displayText: "", path: "", iconClass: "" },
+  { displayText: "", path: "", iconClass: "" },
+  { displayText: "", path: "", iconClass: "" },
+  { displayText: "", path: "", iconClass: "" },
+];
+const noticesResInfoList = [
+  {
+    displayText: "Benefits Comparison Guide 2021",
+    path: "/Documents/Benefit_Comparison_Grid-FY21_Final(003).pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "Benefits Comparison Guide 2022",
+    path: "/Documents/Benefit_Comparison_Grid_FY22_Final_v2.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "Benefits Information",
+    path: "/benefits-info",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "Benefit Plan Contacts",
+    path: "./CarrierContacts.html",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "Benefits Premium Calculator",
+    path: "./ViewPremiumCal.html",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "COBRA Resources Page",
+    path: "./COBRA.html",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "Disability Resources Page",
+    path: "/disability",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "Federal Medicare Part D Creditable Coverage Notices",
+    path: "./FGPOpenFPN.html",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "HIPAA Privacy Notice",
+    path: "/Documents/HIPAA_Privacy_Notice.PDF",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "HR Meetings and Recordings",
+    path: "./HRresources.html",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "Newsletter Archive",
+    path: "./news.html",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "SHARE Self Service Instruction Guide",
+    path: "/share",
+    iconClass: "bx bx-link-alt",
+  },
+  {
+    displayText: "Trifold Benefits Brochure",
+    path: "/documents/Emply_Trifold_6_28_7_18.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+];
+const lpbFormsList = [
+  {
+    displayText: "LPB Employee Change/Correction Form",
+    path: "/documents/LPB_Change_Form.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "POP Waiver Form (LPB)",
+    path: "/documents/POP-LPB-NOTICE-OF-WAIVER-2023.pdf",
+    iconClass: "bx bxs-file-pdf",
+  },
+  {
+    displayText: "Premium Rate Sheets - LPB",
+    path: "./rmdPremiumRates.html",
+    iconClass: "bx bx-link-alt",
+  },
+];
 function Employers() {
   return (
     <>
@@ -11,300 +218,50 @@ function Employers() {
         <div class='side-by-side'>
           <div class='list-box'>
             <h4 class='my-2 py-2'>POLICIES, DOCUMENTS AND FORMS</h4>
+            <hr />
             <ul>
-              <li>
-                <Link
-                  to='documents/Administrative_Guide_2023_July_Final-edit-2.pdf'
-                  target='_blank'
-                >
-                  Administrative Guide
-                </Link>
-              </li>
-              <li>
-                <Link to='/admin-letters'> Administrative Letters</Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/Documents/Benefits_Eligibility_Acknowledgement_2023.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Benefits Eligibility Acknowledgement Form (English)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/Documents/Benefits_Eligibility_Acknowledgement_2023_Spanish.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Benefits Eligibility Acknowledgement Form (Espa&ntilde;ol)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='/documents/Benefits_Eligibility_Acknowledgement_2023_Waiving_All_Benefits.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Benefits Eligibility Acknowledgement Form - Waiving Benefits
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='/documents/Benefits_Eligibility_Acknowledgement_2023_Waiving_All_Benefits_Spanish.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Benefits Eligibility Acknowledgement Form - Waiving Benefits
-                  (Espa&ntilde;ol)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='/Documents/COBRA_Notification_Form-Revised_6-8-2021.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  COBRA Notification to Term Benefits
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='/documents/RMD_Current_Year_Refund_Request_Employee_Revised_2021.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  RMD Current Year Refund Request (Employee)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='/documents/RMD_Current_Year_Refund_Request_ER-financial_Agency_(1)_(002).pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  RMD Current Year Refund Request (Employer)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='/documents/State_of_New_Mexico_Life_Claim_Form.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Death Claim Form
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='/documents/DFA-Summary_Page_2020.xls'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  DFA Summary Page (Download)
-                </Link>
-              </li>
-              <li>
-                <Link to='/disability'>Disability Policy</Link>
-              </li>
-              <li>
-                <Link
-                  to='/documents/Disability Calculation Sheet-Final.xlsx'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Disability Calculation Sheet (Download)
-                </Link>
-              </li>
-              <li>
-                <Link to='/domestic-partnership'>
-                  Domestic Partnership Form
-                </Link>
-              </li>
-              <li>
-                <Link to='/employees'>Employee Enrollment Resources</Link>
-              </li>
-              <li>
-                <Link to='/premiums-due'>
-                  LWOP Benefit Premium Transmittal Form
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='documents/Notification_to_Term_Benefits_July2022.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Notification to Terminate Benefits Due to Non-Payment of
-                  Premiums
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/Documents/POP-SoNM-NOTICE-OF-WAIVER-2023.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  POP Waiver Form (State)
-                </Link>
-              </li>
-              <li>
-                <Link to='/SAE-premium-rates'>PREMIUM RATE SHEETS – STATE</Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/Documents/RMD_Prior_Year_Refund_Request_Employee_Revised_2021.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  RMD Prior Calendar Year Refund Request Form (Employee)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/Documents/RMD_Prior_Year_Refund_Request_ER-financial_Agency_2.6.2020.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  RMD Prior Calendar Year Refund Request Form (Agency)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/documents/W-9_Example.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  W-9 Form Instructions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/documents/W-9_New_Form.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  W-9 New Form
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='/documents/Premium Payment OPR Transmittal.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Premium Payment OPR Transmittal
-                </Link>
-              </li>
+              {policiesDocsFormsList.map((item) => {
+                return (
+                  <li>
+                    <i className={item.iconClass}></i>
+                    <Link to={item.path} target='_blank'>
+                      {item.displayText}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div class='list-box'>
             <h4 class='my-2 py-2'>NOTICES, RESOURCES AND INFORMATION</h4>
+            <hr />
             <ul>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/Documents/Benefit_Comparison_Grid-FY21_Final(003).pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Benefits Comparison Guide 2021
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/Documents/Benefit_Comparison_Grid_FY22_Final_v2.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Benefits Comparison Guide 2022
-                </Link>
-              </li>
-              <li>
-                <Link to='/benefits-info'>Benefits Information</Link>
-              </li>
-              <li>
-                <Link to='./CarrierContacts.html'>Benefit Plan Contacts</Link>
-              </li>
-              <li>
-                <Link to='./ViewPremiumCal.html'>
-                  Benefits Premium Calculator
-                </Link>
-              </li>
-              <li>
-                <Link to='./COBRA.html'>COBRA Resources Page</Link>
-              </li>
-              <li>
-                <Link to='/disability'>Disability Resources Page</Link>
-              </li>
-              <li>
-                <Link to='./FGPOpenFPN.html'>
-                  Federal Medicare Part D Creditable Coverage Notices
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/Documents/HIPAA_Privacy_Notice.PDF'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  HIPAA Privacy Notice
-                </Link>
-              </li>
-              <li>
-                <Link to='./HRresources.html' target='_blank'>
-                  HR Meetings and Recordings
-                </Link>
-              </li>
-              <li>
-                <Link to='./news.html' target='_blank'>
-                  Newsletter Archive
-                </Link>
-              </li>
-              <li>
-                <Link to='/share'>SHARE Self Service Instruction Guide</Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/documents/Emply_Trifold_6_28_7_18.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Trifold Benefits Brochure
-                </Link>
-              </li>
+              {noticesResInfoList.map((item) => {
+                return (
+                  <li>
+                    <i className={item.iconClass}></i>
+                    <Link to={item.path} target='_blank'>
+                      {item.displayText}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div class='list-box'>
             <h4 class='my-2 py-2'>LPB FORMS</h4>
+            <hr />
             <ul>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/documents/LPB_Change_Form.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  LPB Employee Change/Correction Form
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/documents/POP-LPB-NOTICE-OF-WAIVER-2023.pdf'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  POP Waiver Form (LPB)
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='https://www.mybenefitsnm.com/rmdPremiumRates.html'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Premium Rates Sheets – LPB
-                </Link>
-              </li>
+              {lpbFormsList.map((item) => {
+                return (
+                  <li>
+                    <i className={item.iconClass}></i>
+                    <Link to={item.path} target='_blank'>
+                      {item.displayText}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
