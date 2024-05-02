@@ -181,9 +181,11 @@ const Carousel = () => {
 // news items for Carousel
 const items = [
   {
-    title: "Open Enrollment for Plan Year 2024",
+    title: "Wellness Pulse Check Survey",
     image: require("../Media/banner10.png"),
     link: "/open-enrollment",
+    // description:
+    //   "EBB wants your feedback on some stuff and this said somethin else too but i forgot... it doesnt matter, i just wanna see what this looks like ahahah",
   },
   {
     title: "LPB Premium Rates for January 1, 2024",
@@ -238,7 +240,7 @@ const CarouselItem = ({ item }) => {
     <div className={styles.carouselItem} style={gradientOverlay}>
       <div>
         <h4>{item.title}</h4>
-        <div className={styles.carouselItemText}>{`${
+        <div className={item.description && styles.carouselItemText}>{`${
           item.description ? item.description : ""
         }`}</div>
         <Link to={item.link} className={`${styles.btn} ${styles.newsBtn}`}>

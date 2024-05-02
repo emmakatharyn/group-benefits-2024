@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   height: 75vh;
-  /* background-color: #85a8c5; */
+  background-color: #b4d8f5;
 }
 .carousel {
   overflow: hidden;
@@ -36,9 +36,11 @@
 }
 
 .carouselItemText {
-  font-size: 1.15rem;
-  margin: 40px 0;
-  white-space: normal;
+  width: 420px;
+  text-wrap: wrap;
+  /* font-size: 1.15rem; */
+  /* margin: 40px 0; */
+  /* white-space: normal; */
   color: #e5ebf1;
 }
 
@@ -87,6 +89,7 @@
 
 .carouselContainer {
   display: flex;
+  margin-top: 60px;
 }
 .verticalList {
   display: flex;
