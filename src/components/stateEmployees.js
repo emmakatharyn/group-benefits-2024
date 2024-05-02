@@ -30,7 +30,7 @@ function StateEmployees() {
     },
     {
       linkText: "POP Waiver Form (State)",
-      url: "/documents/Aetna_Network_Flyer_proof_2.pdf",
+      url: "/documents/POP-SoNM-NOTICE-OF-WAIVER-2023.pdf",
       iconClass: "bxs-file-pdf",
     },
   ];

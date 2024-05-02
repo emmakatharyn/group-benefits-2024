@@ -66,7 +66,7 @@ function LocalPublicBodyEmployees() {
           <br />I am NOT a New Hire and have a Qualifying Event
         </Link>
         <Link
-          to='/documents/Employee-Benefits-Instructions-for-LPBs1-1-21.pdf'
+          to='/documents/documents/Employee-Benefits-Instructions-for-LPBs1-1-24.pdf'
           className='btn btn-primary quicklink'
           target='_blank'
         >

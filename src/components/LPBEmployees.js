@@ -30,7 +30,7 @@ function LPBEmployees() {
     },
     {
       linkText: "POP Waiver Form (LPB)",
-      url: "/documents/Aetna_Network_Flyer_proof_2.pdf",
+      url: "/documents/POP-LPB-NOTICE-OF-WAIVER-2023.pdf",
       iconClass: "bxs-file-pdf",
     },
   ];

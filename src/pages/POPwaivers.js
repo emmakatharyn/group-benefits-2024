@@ -23,7 +23,7 @@ function POPwaivers() {
       </div>
       <div className='container portal-grid my-5'>
         <a
-          href='documents/POPForm2022-StateFinal.pdf'
+          href='documents/POP-SoNM-NOTICE-OF-WAIVER-2023.pdf'
           className='btn btn-primary quicklink'
         >
           <i className='bx bxs-file-pdf'></i>
@@ -31,7 +31,7 @@ function POPwaivers() {
         </a>
 
         <a
-          href='documents/POPForm2022-LPBFinal.pdf'
+          href='documents/POP-LPB-NOTICE-OF-WAIVER-2023.pdf'
           className='btn btn-primary quicklink'
         >
           <i className='bx bxs-file-pdf'></i>
