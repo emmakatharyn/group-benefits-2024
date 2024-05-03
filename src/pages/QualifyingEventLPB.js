@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 const handleClick = () => {
@@ -9,7 +10,7 @@ function QualifyingEventLPB() {
     <div className='container portal-grid my-5'>
       {/* modal trigger */}
       <button className='btn btn-primary quicklink' onClick={handleClick}>
-        <i class='bx bxs-info-circle'></i>
+        <i className='bx bxs-info-circle'></i>
         What is a Qualifying Event?
       </button>
 
@@ -24,7 +25,7 @@ function QualifyingEventLPB() {
 
       {/* modal trigger */}
       <button className='btn btn-primary quicklink' onClick={handleClick}>
-        <i class='bx bxs-info-circle'></i>
+        <i className='bx bxs-info-circle'></i>
         Printable Enrollment Forms for LPB Employees
       </button>
 
@@ -38,7 +39,7 @@ function QualifyingEventLPB() {
       </Link>
 
       <button className='btn btn-primary quicklink' onClick={handleClick}>
-        <i class='bx bx-shield-alt-2'></i> Supplemental Life Changes
+        <i className='bx bx-shield-alt-2'></i> Supplemental Life Changes
       </button>
 
       <Link to='/lpb-employees' className='btn btn-primary quicklink'>

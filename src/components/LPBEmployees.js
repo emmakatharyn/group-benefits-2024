@@ -1,3 +1,5 @@
+import React from "react";
+
 import ListBox from "./ListBox";
 
 // this used to be the lpb ee grid on employeePortal.html
@@ -56,7 +58,7 @@ function LPBEmployees() {
     },
   ];
   return (
-    <div class='container mx-auto my-5' id='LPB-ee-grid'>
+    <div className='container mx-auto my-5' id='LPB-ee-grid'>
       <div className='side-by-side'>
         <ListBox title={"General Information"} links={lpbGeneralLinks} />
 
