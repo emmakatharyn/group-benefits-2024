@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 function BenefitsInformation() {
@@ -107,7 +108,7 @@ function BenefitsInformation() {
 
             <button
               type='button'
-              class='btn btn-light'
+              className='btn btn-light'
               data-bs-toggle='modal'
               data-bs-target={`#${carrier.modalID}`}
             >

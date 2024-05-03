@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 const handleClick = () => {
@@ -10,7 +11,7 @@ function QualifyingEventState() {
     <div className='container portal-grid my-5'>
       {/* modal trigger */}
       <button className='btn btn-primary quicklink' onClick={handleClick}>
-        <i class='bx bxs-info-circle'></i>
+        <i className='bx bxs-info-circle'></i>
         What is a Qualifying Event?
       </button>
 
@@ -33,12 +34,12 @@ function QualifyingEventState() {
       </Link>
 
       <button className='btn btn-primary quicklink' onClick={handleClick}>
-        <i class='bx bxs-car'></i>
+        <i className='bx bxs-car'></i>
         Transit and Parking Benefit Changes
       </button>
 
       <button className='btn btn-primary quicklink' onClick={handleClick}>
-        <i class='bx bx-shield-alt-2'></i> Supplemental Life Changes
+        <i className='bx bx-shield-alt-2'></i> Supplemental Life Changes
       </button>
 
       <Link to='/state-agency-employees' className='btn btn-primary quicklink'>

@@ -1,16 +1,17 @@
+import React from "react";
 import { Link } from "react-router-dom";
 function Employers() {
   return (
     <>
-      <div class='container'>
-        <h1 class='my-4 mb-2 display-5 text-center'>
+      <div className='container'>
+        <h1 className='my-4 mb-2 display-5 text-center'>
           Employer Information Resources
         </h1>
       </div>
-      <div class='container my-3 mx-auto'>
-        <div class='side-by-side'>
-          <div class='list-box'>
-            <h4 class='my-2 py-2'>POLICIES, DOCUMENTS AND FORMS</h4>
+      <div className='container my-3 mx-auto'>
+        <div className='side-by-side'>
+          <div className='list-box'>
+            <h4 className='my-2 py-2'>POLICIES, DOCUMENTS AND FORMS</h4>
             <ul>
               <li>
                 <Link
@@ -199,8 +200,8 @@ function Employers() {
               </li>
             </ul>
           </div>
-          <div class='list-box'>
-            <h4 class='my-2 py-2'>NOTICES, RESOURCES AND INFORMATION</h4>
+          <div className='list-box'>
+            <h4 className='my-2 py-2'>NOTICES, RESOURCES AND INFORMATION</h4>
             <ul>
               <li>
                 <Link
@@ -275,8 +276,8 @@ function Employers() {
               </li>
             </ul>
           </div>
-          <div class='list-box'>
-            <h4 class='my-2 py-2'>LPB FORMS</h4>
+          <div className='list-box'>
+            <h4 className='my-2 py-2'>LPB FORMS</h4>
             <ul>
               <li>
                 <Link

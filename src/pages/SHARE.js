@@ -1,11 +1,12 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 // employeePortalSub3
 function Share() {
   return (
     <>
-      <div class='container p-0 text-center'>
-        <h1 class='my-4 ps-2 display-5'>SHARE Self Service Manual</h1>
+      <div className='container p-0 text-center'>
+        <h1 className='my-4 ps-2 display-5'>SHARE Self Service Manual</h1>
       </div>
       <div className='container portal-grid my-5'>
         <button
