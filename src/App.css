@@ -363,9 +363,10 @@ footer {
   padding-top: 24px;
   padding-bottom: 24px;
   color: #fff;
-  background-image: linear-gradient(45deg, #1e1f3fd2, #1d264ddc),
+  background-image: linear-gradient(45deg, #1a474ae4, #14526de0),
     url(../public/images/banner2.png);
   background-size: cover;
+  position: relative;
 }
 
 footer a:link,
@@ -381,7 +382,7 @@ footer a:active {
 footer div.container {
   display: flex;
   justify-content: space-evenly;
-  gap: 12px;
+  /* gap: 12px; */
 }
 
 footer a.centered-link:link,
@@ -406,6 +407,50 @@ footer h4 {
   width: 100%;
   justify-content: space-between;
   margin-top: 42px;
+}
+
+
+.footer-credit-logo {
+  width: 64px;
+}
+
+.hca .footer-credit-logo {
+  width:88px;
+}
+
+.footer-credit-text {
+  max-width: 224px;
+  line-height: 1.25;
+  font-size: 16px;
+}
+
+.erisa-credits a:link {
+  text-decoration: none;
+}
+
+/* NEW FOOTER OVERRIDES */
+.container.erisa-credits {
+  margin-top: 24px;
+}
+
+.footer-credit-logo {
+  width: 64px;
+}
+
+
+.footer-credit-text {
+  max-width: 224px;
+  line-height: 1.25;
+  font-size: 16px;
+}
+
+.footer-credit-text span {
+  text-decoration: none;
+}
+
+.erisa-credits .easi {
+  display: flex;
+  align-items: center;
 }
 
 /* Open Enrollment pg */

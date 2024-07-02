@@ -102,6 +102,11 @@
   .list-and-content div.container.p-2.pt-0 {
     margin-left: 260px;
   }
+
+  footer div.container.erisa-credits {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 800px) {
