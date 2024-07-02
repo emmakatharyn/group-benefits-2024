@@ -118,6 +118,11 @@ header.container-lg {
 
 /* carousel component styles here? */
 
+.outer-flexbox {
+  display: flex;
+  align-items: flex-start;
+}
+
 /* "CLICK HERE TO UPDATE HOME ADDRESS" ANIMATION */
 .slide-in-link {
   display: block;
@@ -162,25 +167,28 @@ header.container-lg {
 /* quicklinks boxes */
 .quicklinks-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
-  max-width: 1200px;
+  max-width: 508px;
   margin: 0 auto;
-  margin-top: 58px;
-  margin-bottom: 58px;
+  /* margin-top: 58px; */
+  /* margin-bottom: 58px; */
 }
 
-.btn.btn-primary.quicklink {
-  padding: 64px 32px;
-  border-radius: 4px;
+.btn-primary.quicklink {
+  color:#fff;
+  padding: 46px 16px;
+  /* border-radius: 4px; */
   border: none;
   background-size: cover;
   background-repeat: no-repeat;
-
+  text-decoration: none;
   transition: all 0.2s ease-in-out;
+  font-size: 18px
 }
 
-.btn.btn-primary.quicklink:hover {
+.btn-primary.quicklink:hover {
   transform: scale(1.05);
 }
 

@@ -1,14 +1,14 @@
 .App {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  height: 75vh;
-  background-color: #b4d8f5;
+  /* height: 75vh; */
+  /* background-color: #b4d8f5; */
 }
 .carousel {
   overflow: hidden;
-  width: 700px;
+  width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 478px;
+  height: 476px;
   background-color: #fff;
   width: 100%;
 }
@@ -89,7 +89,7 @@
 
 .carouselContainer {
   display: flex;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 .verticalList {
   display: flex;
@@ -113,6 +113,27 @@
   color: #fff;
 }
 
+@media (max-width: 1162px) {
+  .carousel {
+    width: 640px;
+  }
+  .carouselItem {
+    height: 466px;
+  }
+  .listItem {
+    width: 100%;
+    cursor: pointer;
+    padding: 12px 6px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+
+  .listItemActive {
+    background-color: #007aff;
+    color: #fff;
+  }
+}
+
 @media (max-width: 920px) {
   .carouselContainer {
     width: 100vw;
@@ -121,7 +142,7 @@
     height: 488px;
   }
   .listItem {
-    padding: 12px 6px;
+    padding: 13px 8px;
   }
 
   .verticalList {
@@ -135,5 +156,17 @@
   }
   .verticalList {
     display: none;
+  }
+}
+
+@media (min-width:1364px) {
+  .carousel {
+    width: 980px;
+  }
+}
+
+@media (min-width:1600px) {
+  .carousel {
+    width: 1200px;
   }
 }
